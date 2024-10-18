@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+  "sort"
 	"strings"
 	"sync"
 )
@@ -42,6 +43,7 @@ func main () {
     wordCountString := "{" + word + " " + strconv.Itoa(count) + "}"
     result = append(result, wordCountString)
   }
+  sort.Strings(result)
   fmt.Println(result)
 }
 
